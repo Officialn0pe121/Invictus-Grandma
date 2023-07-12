@@ -2,6 +2,7 @@ local QBCore = exports['qb-core']:GetCoreObject()
 
 local lady = {}
 local GrandmaCoords = vector4(2435.63, 4965.12, 45.81, 8.76)
+local NotifySystem = "tnj-notify" -- "okok-notify"/"tnj-notify"/"ps-ui"
 
 local function loadAnimDict(dict)
     RequestAnimDict(dict)
@@ -100,7 +101,7 @@ RegisterNetEvent("Invictus-Grandma:client:checkshit", function()
                 end
             end)
         else
-            exports['tnj-notify']:Notify("You don\'t need a band-aid!", "error", 5000)
+            exports[NotifySystem]:Notify("You don\'t need a band-aid!", "error", 5000)
         end
     end)
 end)
